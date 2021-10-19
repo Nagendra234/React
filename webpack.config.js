@@ -1,4 +1,5 @@
 const path = require('path');
+const htmlPlugIn=require('html-webpack-plugin')
 
 module.exports = {
   entry: './index.js',
@@ -15,12 +16,20 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              ['@babel/preset-env']
-            ]
+           
           }
         }
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       }
-    ]
-  }
+    ],
+  },
+  plugins: [
+    new htmlPlugIn({
+        template:'./public/index.html',
+        filename:'index.html'
+    })
+  ]
 };
