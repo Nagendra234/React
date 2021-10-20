@@ -1,7 +1,7 @@
 /* eslint-disable no-dupe-keys */
 module.exports = {
 
-  parser: ['@babel/eslint-parser', 'babel-eslint'],
+  parser: '@babel/eslint-parser',
   env: {
     browser: true,
     es2021: true,
@@ -13,6 +13,7 @@ module.exports = {
   ],
   parserOptions: {
     ecmaFeatures: {
+      module: true,
       jsx: true,
     },
     ecmaVersion: 12,
@@ -22,7 +23,7 @@ module.exports = {
     'react',
     'import',
     'babel',
-    '@babel',
+    'eslint-plugin'
 
   ],
   rules: {
