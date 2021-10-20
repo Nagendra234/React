@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react'
 
 export class Todo extends Component {
-    state={
+    state = {
         todolist: []
     }
 
@@ -11,8 +11,8 @@ export class Todo extends Component {
         e.preventDefault()
         this.setState(({ todolist }) => ({
             // eslint-disable-next-line max-len
-            todolist: [...todolist, { text: this.todoInput.current.value, id: new Date().getTime() }]
-
+            todolist: [...todolist, { text: this.todoInput.current.value, id: new Date().getTime() }],
+            // eslint-disable-next-line react/no-unused-state
     }))
 }
 
@@ -25,7 +25,7 @@ export class Todo extends Component {
                     <input type="text" ref={this.todoInput} />
                     <button type="submit">Add Todo</button>
                 </form>
-                { todolist.map((item) => (
+                {todolist.map((item) => (
                         <div key={item.id}>
                             <h1>{item.text}</h1>
                         </div>

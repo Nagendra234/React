@@ -1,8 +1,7 @@
 /* eslint-disable no-dupe-keys */
 module.exports = {
 
-  parser: '@babel/eslint-parser',
-  parser: 'babel-eslint',
+  parser: ['@babel/eslint-parser', 'babel-eslint'],
   env: {
     browser: true,
     es2021: true,

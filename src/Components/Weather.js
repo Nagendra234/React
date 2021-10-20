@@ -10,7 +10,7 @@ export class Weather extends Component {
     getWeather=(e) => {
         e.preventDefault()
         this.setState(() => ({
-                text: this.weatherInput.current.value
+                text: `Weather ${this.weatherInput.current.value} is Cool `
             }))
     };
 
