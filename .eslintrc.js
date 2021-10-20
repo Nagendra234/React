@@ -1,7 +1,8 @@
+/* eslint-disable no-dupe-keys */
 module.exports = {
-  
+
   parser: '@babel/eslint-parser',
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   env: {
     browser: true,
     es2021: true,
@@ -22,16 +23,19 @@ module.exports = {
     'react',
     'import',
     'babel',
-    // '@babel'
-    
-    
+    '@babel',
+
   ],
   rules: {
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     semi: 0,
-    'indent': 0,
+    indent: 0,
     'react/jsx-indent': 0,
+    'array-element-newline': 0,
+    'import/newline-after-import': 0,
+    'comma-dangle': 0,
+    'import/no-named-as-default': 0,
   },
 };

@@ -1,20 +1,21 @@
-import { text } from 'express'
-import React, { Component,createRef } from 'react'
+import React, { Component, createRef } from 'react'
 
 export class Weather extends Component {
-    state={
-        text:""
+    state = {
+        text: '',
     }
 
     weatherInput=createRef()
-    getWeather=(e)=> {
-        e.preventDefault()
-        this.setState({ text:`Weather in ${this.state.text} is Cool`})
 
-    }
+    getWeather=(e) => {
+        e.preventDefault()
+        this.setState(() => ({
+                text: this.weatherInput.current.value
+            }))
+    };
 
     render() {
-        const { text }=this.state
+        const { text } = this.state
         return (
             <div>
                 <h1>Weather Check</h1>

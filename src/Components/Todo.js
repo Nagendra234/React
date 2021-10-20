@@ -1,34 +1,35 @@
-import React, { Component,createRef } from 'react'
+import React, { Component, createRef } from 'react'
 
 export class Todo extends Component {
     state={
-        todolist:[]
+        todolist: []
     }
 
     todoInput=createRef()
 
-    addTodo=(e)=>{
+    addTodo=(e) => {
         e.preventDefault()
-        this.setState(({todolist})=>({
-            todolist:[...todolist,{text:this.todoInput.current.value,id:new Date().getTime()}]
-            
+        this.setState(({ todolist }) => ({
+            // eslint-disable-next-line max-len
+            todolist: [...todolist, { text: this.todoInput.current.value, id: new Date().getTime() }]
+
     }))
 }
-    render(){
+
+    render() {
+        const { todolist } = this.state
         return (
             <div>
                 <h1>Todo List</h1>
                 <form onSubmit={this.addTodo}>
-                    <input type="text" ref={this.todoInput}/>
+                    <input type="text" ref={this.todoInput} />
                     <button type="submit">Add Todo</button>
                 </form>
-                {this.state.todolist.map((item)=>{
-                    return(
+                { todolist.map((item) => (
                         <div key={item.id}>
                             <h1>{item.text}</h1>
                         </div>
-                    )
-                })}
+                    ))}
             </div>
         )
     }
