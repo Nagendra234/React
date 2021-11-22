@@ -1,0 +1,36 @@
+/* header {
+    background-color:dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+header div{
+    position: absolute;
+    left:50px;
+    color: aliceblue;
+}
+nav ul {
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    padding:10px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none ;
+}
+
+ */
+ li{
+     list-style: none;
+     padding: 15px;
+ }
+ a{
+     text-decoration: none;
+     color: white;
+ }
