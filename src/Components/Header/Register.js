@@ -9,7 +9,6 @@ import axiosInstance from '../axois/AxoisIns';
 
 const Register = ({ history }) => {
   const onRegister = async (values, actions) => {
-    console.warn(actions);
     // json-server db.json -m ./node_modules/json-server-auth
     try {
     //   const res = await fetch('http://localhost:3000/login', {
